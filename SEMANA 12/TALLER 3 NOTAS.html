@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo while</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/logo incap.png" alt="" width="150" height="150">
+        <h1>BOLETIN DE NOTAS SEMESTRE A2024</h1>
+        <h2>MATERIA PAE JAVASCRIPT </h2>
+        <h3>NOTAS [1= DESEMPEÑO - 2= TALLERES CLASE 3= CUESTIONARIOS]</h3>
+        <script>
+            let nota_std, suma_nota, prom;
+            suma_nota=0;//sumador de notas
+            prom=0;//promedio de definitiva
+            num=1;//variable de ciclo while
+            //ENTRADA
+            nombre_std=prompt("INGRESE NOMBRE ESTUDIANTE");
+            //CICLO WHILE
+            while(num<=3){
+                nota_std=parseFloat(prompt("INGRESE NOTA [1 A 5]"));
+                //ACUMULADOR
+                suma_nota+=nota_std; // es igual a suma_nota=suma_nota+nota_std
+                //contador del ciclo while
+                num++;
+            }
+            //CALCULAR NOTA FINAL
+            prom=suma_nota/(num-1);
+            //condicional nota
+            if(prom>=3.0){
+                swal("APRECIADO ESTUDIANTE","FELICITACIONES APROBASTE MATERIA PAE JAVASCRIPT","success");
+                document.write("PASA AL SIGUIENTE NIVEL DE PROGRAMACION PHP");
+            }else{
+                swal("APRECIADO ESTUDIANTE","REPROBASTE MATERIA PAE JAVASCRIPT","error");
+                document.write("DEBES DE HACER RECUPERACION");
+            }
+            //SALIDA
+            document.write("<br>"+"<br>");
+            document.write("*************************************************"+"<br>");
+            document.write("ESTUDIANTE..."+nombre_std+"<br>");
+            document.write("NOTA FINAL DE MATERIA PAE ES..."+prom.toFixed(2)+"<br>");
+            document.write("***********************************************"+"<br>");
+        </script>
+    </center>
+</body>
+</html>
