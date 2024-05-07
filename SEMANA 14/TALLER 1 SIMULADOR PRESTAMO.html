@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTO ONCLICK JS</title>
+    <link rel="stylesheet" href="./css/CSS TALLER 1.css">
+    <script src="./js/simulador_credito.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <label for="">Valor Credito</label>
+            <input type="text" id="valorc" class="box">
+            <label for="">Numero De Cuotas mensuales</label>
+            <input type="text" id="numc" class="box">
+            <label for="">Tasa de interes mensual</label>
+            <input type="text" id="interes" class="box">
+            <label for="">Valor cuota a pagar</label>
+            <input type="text" id="valora" class="box" disabled>
+            <label for="">Valor del prestamo</label>
+            <input type="text" id="valorb" class="box" disabled>
+            <!-- seccion botones -->
+            <input type="button" value="calcular" class="submit" onclick="calcular()">
+            <input type="button" value="limpiar" class="submit" onclick="limpiar()">
+        </form>
+    </div>
+</body>
+</html>
